@@ -1,0 +1,7 @@
+<!-- <div *ngIf="active">
+    <ng-content></ng-content>
+</div> -->
+
+<div [class.hidden]="!active">
+    <ng-content></ng-content>
+</div>
