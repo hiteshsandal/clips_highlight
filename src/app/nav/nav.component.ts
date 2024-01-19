@@ -22,7 +22,6 @@ export class NavComponent implements OnInit {
   }
 
   async logout($event: Event){
-    $event.preventDefault();
-    await this.authService.logoutUser();
+    await this.authService.logoutUser($event);
   }
 }
