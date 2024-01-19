@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { ManageComponent } from './video/manage/manage.component';
+import { ClipComponent } from './clip/clip.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
-    path: "home",
+    path: "",
     component: HomeComponent
   },
   {
@@ -13,9 +16,12 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
+    path: "clip/:id",
+    component: ClipComponent 
+  },
+  {
     path: "**", 
-    redirectTo: "home",
-    pathMatch: "full"
+    component: NotFoundComponent
   }
 ];
 
